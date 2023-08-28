@@ -121,15 +121,18 @@
     .services-container {
         margin: 0 1.52rem;
     }
-
     .service-box {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
+    .service-img {
+        padding: 0 !important;
+    }
+
     .service-parah {
-        padding: 0;
+        padding: 0 !important;
         margin-top: 1rem;
     }
 
@@ -145,12 +148,13 @@
     }
 
     .service-footer>a {
-        font-size: .51rem;
+        font-size: .81rem;
         line-height: 1rem;
     }
 
     .service-footer {
         padding-top: 5vh;
+        padding-bottom: 10vh;
     }
 
     #footer {
@@ -158,6 +162,10 @@
         align-items: flex-start;
         padding: 2rem 1.52rem;
         gap: 20px;
+    }
+
+    #footer a {
+        font-size: 1.83vh;
     }
 }
 
