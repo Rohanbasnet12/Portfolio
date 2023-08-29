@@ -31,10 +31,39 @@ html {
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    z-index: 99999;
+    z-index: 99;
     position: absolute;
     background-color: #fff;
     transition: all cubic-bezier(0.10, 1, 0.22, 1) 1s;
+}
+
+.circle {
+    background-color: white;
+    position: absolute;
+    color: red;
+    z-index: 100;
+    height: 6vw;
+    width: 6vw;
+    border-radius: 50px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-114%, -50%);
+    justify-content: center;
+    opacity: 0;
+}
+
+.circle p {
+    background-color: transparent;
+    z-index: 100;
+}
+
+.circle a {
+    background-color: transparent;
+    color: rgb(54, 24, 24);
+    z-index: 100;
 }
 
 /* STYLING NAVBAR */
@@ -392,6 +421,8 @@ html {
     justify-content: space-between;
     padding: 40px 30px;
     font-family: var(--FIRST-FONT);
+    overflow: hidden;
+    border: 2px solid white;
 }
 
 #footerleft {
