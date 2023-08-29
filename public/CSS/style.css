@@ -422,7 +422,6 @@ html {
     padding: 40px 30px;
     font-family: var(--FIRST-FONT);
     overflow: hidden;
-    border: 2px solid white;
 }
 
 #footerleft {
