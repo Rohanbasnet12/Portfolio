@@ -7,16 +7,15 @@ const scroll = new LocomotiveScroll({
 
 
 
-// Animation follow the mouse 
-
+// Animation follow the mouse
 var timeoutId; // Declare the timeoutId variable outside the functions
+var minObj = document.querySelector('.minObj'); // Get the object element
 
 function makeMouseShrink() {
     var xScale = 1;
     var yScale = 1;
     var xPrev = 0;
     var yPrev = 0;
-    var minObj = document.querySelector('.minObj');
 
     window.addEventListener("mousemove", function (detail) {
         xScale = gsap.utils.clamp(0.8, 1.2, detail.clientX - xPrev);
@@ -35,6 +34,7 @@ function makeMouseShrink() {
 }
 
 makeMouseShrink();
+
 
 
 // Animation on load
@@ -77,6 +77,7 @@ document.querySelectorAll('.big-head').forEach(function (element) {
         var difference = details.clientY - element.getBoundingClientRect().top;
         differentRotate = details.clientX - rotate;
         rotate = details.clientX;
+        var differenceY = details.clientY - element.getBoundingClientRect().top;
 
         gsap.to(element.querySelector('img'), {
             opacity: 1,
@@ -85,6 +86,13 @@ document.querySelectorAll('.big-head').forEach(function (element) {
             left: details.clientX,
             rotate: gsap.utils.clamp(-15, 15, differentRotate)
         })
+
+        gsap.to(element.querySelector('.circle'), {
+            opacity: 1,
+            ease: 'power3',
+            top: differenceY,
+            left: details.clientX,
+        });
     })
 });
 
@@ -94,8 +102,14 @@ document.querySelectorAll('.big-head').forEach(function (element) {
             opacity: 0,
             ease: Power3,
         })
+
+        gsap.to(element.querySelector('.circle'), {
+            opacity: 0,
+            ease: 'power3',
+        });
     })
 });
+
 
 // Function to update the time display
 function updateTime() {
@@ -150,3 +164,4 @@ menuLinks.forEach(link => {
         menu.classList.add('menu-dragDown');
     });
 });
+
