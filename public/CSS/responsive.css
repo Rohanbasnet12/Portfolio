@@ -167,6 +167,14 @@
     #footer a {
         font-size: 1.83vh;
     }
+    
+#footerleft {
+    gap: 20px;
+    }
+
+#footerright {
+    gap:14px;
+    }
 }
 
 @media (max-width: 991.98px) {
