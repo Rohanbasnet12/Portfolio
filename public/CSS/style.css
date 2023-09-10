@@ -426,7 +426,7 @@ html {
 
 #footerleft {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 #footerleft h5 {
@@ -435,7 +435,7 @@ html {
 
 #footerright {
     display: flex;
-    gap: 14px;
+    gap: 20px;
 }
 
 #footer a {
